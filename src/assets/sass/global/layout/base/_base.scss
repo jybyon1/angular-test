@@ -1,0 +1,62 @@
+//
+// Base
+//
+
+
+
+// Body
+body {
+	background: #fbfbfc;
+}
+
+// Desktop mode
+@include kt-desktop {
+	// Page
+	.kt-wrapper {
+		transition: kt-get($kt-aside-config, base, minimize, transition);
+
+		// Fixed Header
+		.kt-header--fixed & {
+			padding-top: kt-get($kt-header-config, base, desktop, default, height);
+		}
+
+		// Fixed Aside
+		.kt-aside--fixed & {
+			padding-left: kt-get($kt-aside-config, base, default, width);
+		}
+
+		// Minimize Aside
+		.kt-aside--fixed.kt-aside--minimize & {
+			padding-left: kt-get($kt-aside-config, base, minimize, width);
+			transition: kt-get($kt-aside-config, base, minimize, transition);
+		}
+	}
+
+	// Container
+	.kt-container {
+		//padding: 0 kt-get($kt-page-padding, desktop);
+	}
+}
+
+// Fixed container width change to fluid
+@include kt-media-range( lg, $kt-page-container-width + $kt-aside-default-width + (2 * kt-get($kt-page-padding, desktop)) ) {
+	.kt-container:not(.kt-container--fluid) {
+		width: 100%;
+	}
+}
+
+// Tablet & mobile mode
+@include kt-tablet-and-mobile {
+	// Page
+	.kt-wrapper {
+		// Fixed Header
+		.kt-header-mobile--fixed & {
+			padding-top: kt-get($kt-header-config, base, mobile, self, default, height);
+		}
+	}
+
+	// Container
+	.kt-container {
+		// padding: 0 kt-get($kt-page-padding, mobile);
+	}
+}

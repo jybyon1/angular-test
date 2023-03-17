@@ -20,19 +20,33 @@
             "outputPath": "dist/angular-project",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
+              "node_modules/jqueryui/jquery-ui.css",
+              "node_modules/selectric/public/selectric.css",
+              "src/assets/common/css/jquery/selectric.css",
+              "src/assets/common/css/common.css",
+              "node_modules/virtual-select-plugin/dist/virtual-select.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jqueryui/jquery-ui.js",
+              "node_modules/selectric/public/jquery.selectric.min.js",
+              "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
+              "src/assets/common/js/front.ui.bs.js",
+              "src/assets/common/js/layer.popup.js",
+              "src/assets/common/js/common.func.js",
+              "node_modules/virtual-select-plugin/dist/virtual-select.min.js"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/assets"]
+            }
           },
           "configurations": {
             "production": {
@@ -82,19 +96,11 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }

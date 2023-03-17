@@ -1,0 +1,148 @@
+<div class="wrapper">
+  <div class="content_wrap">
+    <!-- S:content_outbox -->
+    <div class="content_outbox">
+      <!-- S:content_body -->
+      <div class="content_body">
+        <!-- S:content_inner -->
+        <div class="content_inner">
+          <div class="box_com term_wrap">
+            <div class="layer_padding">
+              <div class="fl">
+                <!-- S :  selectric  -->
+                <div class="dis_inline mr selectric_default_w">
+                  <select
+                    id="layer"
+                    class="ui-sel sel_black"
+                    [formControl]="layerControl"
+                  >
+                    <option [value]="'all'">전체</option>
+                    <option
+                      *ngFor="let layer of layerList"
+                      [value]="layer['layer_name']"
+                    >
+                      {{ layer["layer_name"] }}
+                    </option>
+                  </select>
+                </div>
+                <!-- E : selectric -->
+              </div>
+              <div class="fr">
+                <button type="button" class="btn">레이어 등록</button>
+              </div>
+            </div>
+          </div>
+          <div class="table_wrap table_area tbl_col">
+            <table class="table_header">
+              <caption>
+                layer
+              </caption>
+              <colgroup>
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+                <col style="width: 25%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">레이어 이름</th>
+                  <th scope="col">레이어 종류</th>
+                  <th scope="col">서브 레이어</th>
+                  <th scope="col">스타일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="no-data" *ngIf="!loading && layerData.length === 0">
+                  <td colspan="4">해당 데이터가 없습니다.</td>
+                </tr>
+                <tr *ngFor="let item of layerData">
+                  <td>{{ item["layer_name"] }}</td>
+                  <td>{{ item["layer_type"] }}</td>
+                  <td>{{ item["sublayer_name"] }}</td>
+                  <td>{{ item["sublayer_name"] }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<ng-template #template>
+  <div class="card-header">
+    <div class="info-title ellipsis">레이어 테이블명 설정</div>
+    <div>
+      <a href="javascript:void(0);" title="닫기" (click)="modalRef.hide()">
+        <em class="fal fa-times" style="font-size: 20px"></em>
+      </a>
+    </div>
+  </div>
+  <div class="card-body">
+    <form id="layerForm">
+      <div class="input_group">
+        <input
+          type="text"
+          class="ui_input full"
+          [formControl]="layerTableName"
+          placeholder="레이어 테이블명"
+          maxlength="20"
+          [ngClass]="{
+            inputError:
+              layerTableName.invalid &&
+              (layerTableName.dirty || layerTableName.touched)
+          }"
+        />
+        <p
+          class="error"
+          *ngIf="
+            layerTableName.invalid &&
+            (layerTableName.dirty || layerTableName.touched)
+          "
+        >
+          <span *ngIf="layerTableName.errors.pattern"
+            >20자 이하 영문 소문자, 숫자, 특정 특수문자('_')만 입력
+            가능합니다.</span
+          >
+          <span *ngIf="layerTableName.errors.overlap"
+            >이미 등록된 테이블명 입니다.</span
+          >
+        </p>
+      </div>
+    </form>
+    <strong
+      >· DB에 테이블 생성 시 입력한 이름으로 테이블이 생성됩니다.<br
+    /></strong>
+    <strong
+      >· 테이블명을 설정하지 않아도 레이어 등록할 수 있습니다.<br
+    /></strong>
+    <strong
+      >&nbsp;(테이블명을 설정하지 않을 경우 자동으로 'layer_숫자'로
+      생성됩니다.)<br
+    /></strong>
+  </div>
+  <div class="card-footer">
+    <button
+      type="button"
+      class="btn"
+      data-dismiss="modal"
+      (click)="modalRef.hide()"
+    >
+      닫기
+    </button>
+    <button
+      form="layerForm"
+      class="btn solid"
+      [disabled]="layerTableName.invalid"
+      (click)="moveRegister()"
+    >
+      등록
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #labelTemplate let-flatNode="flatNode">
+  <ng-container *ngIf="flatNode"> </ng-container>
+</ng-template>

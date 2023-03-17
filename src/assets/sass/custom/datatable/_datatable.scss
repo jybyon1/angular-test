@@ -1,0 +1,22 @@
+//
+// Datatable
+//
+
+
+// Include global config
+@import "../../config";
+
+// Include datatable config
+@import "config";
+
+.inno-datatable {
+	tbody{
+		tbody{
+			tr{
+				cursor: pointer;
+				border-bottom: 1px solid #333;
+			}
+		}
+
+	}
+}

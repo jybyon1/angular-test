@@ -1,0 +1,45 @@
+.wrapper {
+  height: 100%;
+  .inner_padding {
+    padding-left: 60px;
+    text-align: left;
+  }
+  .inno-polygon {
+    border: 1px solid #ddd;
+    height: 20px;
+    width: 22px;
+  }
+  .inno-circle {
+    border: 1px solid #ddd;
+    height: 26px;
+    width: 26px;
+    vertical-align: middle;
+    border-radius: 26px;
+  }
+  .inno-line {
+    width: 22px;
+    height: 2px;
+    hr {
+      margin: 9px 0 7px 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.content_inner {
+  position: relative;
+  box-sizing: border-box;
+  height: calc(100% - 42px);
+  overflow-y: auto;
+}
+.box_com.term_wrap .fr {
+  width: 15%;
+}
+
+.layer_padding {
+  padding: 100px;
+}
+
+.color-white {
+  color: #fff !important;
+}

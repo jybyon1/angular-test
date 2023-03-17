@@ -1,0 +1,82 @@
+//
+// Left Inner Aside
+//
+
+@import "../../../config";
+
+$inner-aside-left-default-width: 435px;
+
+$inner-aside-left-width: (
+	POPULATION_FLOW: 435px,
+	MONITORING: 435px,
+	SMS_DISP: 435px,
+	LEGEND_MON: 375px,
+	EVENT: 435px,
+	CAR_NUM: 435px,
+	CAR_NUM_DETAIL: 600px,
+	EPIDEMIC: 435px,
+	SMART_SEARCH: 435px,
+	LEGEND_ASSET: 375px,
+	EXTERNAL_GIS: 405px,
+	BIGDATA_REPORT: 675px,
+	REPORT_RESULT: 600px,
+	NDMS_INFO: 435px,
+	INSTALL_GUIDE: 435px,
+	INSTALL_GUIDE_EDIT: 538px,
+	INSTALL_GUIDE_PREVIEW: 600px,
+	SAFE_MAP: 350px,
+	ELEC_DISP: 435px,
+	ELEC_MNGT: 600px,
+	INTG_BRDCST: 435px,
+	MSG_HIST: 435px,
+	BRDCST_MNG: 435px,
+	BRODCST_HIST: 435px,
+	SMART_BRDCST: 435px,
+	SMART_BRDCST_HIST: 435px,
+);
+
+$kt-inner-aside-left-config: (
+	self: (
+		padding: 0,
+		bg-color: #fff,
+		shadow: 0px 0px 28px 0px rgba(82,63,105,0.13),
+
+		offcanvas: (
+			layout: (
+				self: (
+					zindex: 50,
+					direction: left,
+					transition:	all .3s ease,
+					width: $inner-aside-left-default-width
+				),
+
+				close: (
+					size: 25px,
+					font-size: 1.4rem
+				)
+			),
+
+			skin: (
+				self: (
+					bg-color: #ffffff,
+					shadow: 0px 1px 9px -3px rgba(0,0,0,0.75)
+				),
+
+				overlay: (
+					bg-color: rgba(#000000, 0.1),
+				),
+
+				close: (
+					icon-color: (
+						default: #968ad4,
+						hover: #ffffff
+					),
+					bg-color: (
+						default: darken(#f8f8fb, 5%),
+						hover: kt-brand-color()
+					)
+				)
+			)
+		)
+	)
+);

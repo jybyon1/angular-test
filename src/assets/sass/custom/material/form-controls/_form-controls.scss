@@ -1,0 +1,33 @@
+//
+// Angular Material Form Controls
+//
+
+
+// Include global config
+@import "../../../config";
+
+// Include Form Controls config
+@import "config";
+
+
+.mat-form-field {
+
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-prefix .mat-datepicker-toggle-default-icon,
+.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+	width: 1.2em !important;
+}
+
+input[type="time"]::-webkit-clear-button,
+input[type="date"]::-webkit-clear-button {
+	display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+	display: none;
+	-webkit-appearance: none;
+}

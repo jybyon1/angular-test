@@ -1,0 +1,19 @@
+.dis_inline{display: inline-block !important;}
+.dis_inline_top{display: inline-block !important;vertical-align: top;}
+.dis_inline_sub{display: inline-block !important;vertical-align: sub !important;}
+.dis_inline_mid{display: inline-block !important;vertical-align: middle !important;}
+button:disabled{cursor: auto;}
+.cs_point{cursor: pointer !important;}
+.ui_tree .ui_tree_item.no-sub .ui_tree_title {width: 100%;}
+.ui_tree .ui_tree_item.no-sub .ui_tree_title .title {display: inline-block;vertical-align: middle;width: calc(100% - 150px);color: #fff;font-weight: bold;font-size: 15px;}
+.ui_tree .ui_tree_item.no-sub .ui_tree_title.no_controls .title {width: 100%;}
+.ui_tree .ui_tree_item .handle {display: inline-block;vertical-align: middle;width: 30px;color: #fff;height: 21px;margin-top: 1px;float: left;}
+.ui_tree .ui_tree_item .handle span {margin-top: -2px;cursor: pointer;transform-origin: center;width: 15px;display: block;transition: 0.3s linear;transform: rotate(-90deg);}
+.ui_tree .ui_tree_item input:checked + label span {transform: rotate(0deg);}
+.ui_tree .ui_tree_item input:checked ~ .ui_tree_content {display: block;}
+.ui_tree .ui_tree_item .ui_tree_title {float: right;width: calc(100% - 30px);}
+.ui_tree .ui_tree_item .ui_tree_title .title {display: inline-block;vertical-align: middle;	width: calc(100% - 180px);color: #fff;font-weight: bold;font-size: 15px;}
+.ui_tree .ui_tree_item .ui_tree_title .controls {display: inline-block;vertical-align: middle;width: 150px;}
+.ui_tree .ui_tree_item .ui_tree_content {display: none;	width: calc(100% - 30px);float: right;}
+// common에 추가
+

@@ -1,0 +1,157 @@
+[
+	{
+		"name": "E-MAP_1",
+		"value": "emap1",
+		"type": "category",
+		"expanded": true,
+		"readonly": true,
+		"parent": "ROOT",
+		"children": [
+			{
+				"name": "E-MAP_1 서브레이어1",
+				"value": "emap1_sub1",
+				"parent": "emap1",
+				"type": "emap",
+				"property": {}
+			},
+			{
+				"name": "E-MAP_1 서브레이어2",
+				"value": "emap1_sub2",
+				"parent": "emap1",
+				"type": "emap",
+				"property": {}
+			},
+			{
+				"name": "E-MAP_1 서브레이어3",
+				"value": "emap1_sub3",
+				"parent": "emap1",
+				"type": "emap",
+				"property": {}
+			}
+		]
+	},
+	{
+		"name": "E-MAP_2",
+		"value": "emap2",
+		"type": "category",
+		"expanded": true,
+		"readonly": true,
+		"parent": "ROOT",
+		"children": [
+			{
+				"name": "E-MAP_2 서브레이어1",
+				"value": "emap2_sub1",
+				"parent": "emap2",
+				"type": "emap",
+				"property": {}
+			},
+			{
+				"name": "E-MAP_2 서브레이어2",
+				"value": "emap2_sub2",
+				"parent": "emap2",
+				"type": "emap",
+				"property": {}
+			},
+			{
+				"name": "E-MAP_2 서브레이어3",
+				"value": "emap2_sub3",
+				"parent": "emap2",
+				"type": "emap",
+				"property": {}
+			}
+		]
+	},
+	{
+		"name": "E-MAP_3",
+		"value": "emap3",
+		"type": "category",
+		"expanded": true,
+		"readonly": true,
+		"parent": "ROOT",
+		"children": [
+			{
+				"name": "E-MAP_3 서브레이어1",
+				"value": "emap3_sub1",
+				"parent": "emap3",
+				"type": "emap",
+				"property": {}
+			},
+			{
+				"name": "E-MAP_3 서브레이어2",
+				"value": "emap3_sub2",
+				"parent": "emap3",
+				"type": "emap",
+				"property": {}
+			},
+			{
+				"name": "E-MAP_3 서브레이어3",
+				"value": "emap3_sub3",
+				"parent": "emap3",
+				"type": "emap",
+				"property": {}
+			}
+		]
+	},
+	{
+		"name": "E-MAP_4",
+		"value": "emap4",
+		"type": "category",
+		"expanded": true,
+		"readonly": true,
+		"parent": "ROOT",
+		"children": [
+			{
+				"name": "E-MAP_4 서브레이어1",
+				"value": "emap4_sub1",
+				"parent": "emap4",
+				"type": "emap",
+				"property": {}
+			},
+			{
+				"name": "E-MAP_4 서브레이어2",
+				"value": "emap4_sub2",
+				"parent": "emap4",
+				"type": "emap",
+				"property": {}
+			},
+			{
+				"name": "E-MAP_4 서브레이어3",
+				"value": "emap4_sub3",
+				"parent": "emap4",
+				"type": "emap",
+				"property": {}
+			}
+		]
+	},
+	{
+		"name": "E-MAP_5",
+		"value": "emap5",
+		"type": "category",
+		"expanded": true,
+		"readonly": true,
+		"parent": "ROOT",
+		"children": [
+			{
+				"name": "E-MAP_5 서브레이어1",
+				"value": "emap5_sub1",
+				"parent": "emap5",
+				"type": "emap",
+				"property": {}
+			},
+			{
+				"name": "E-MAP_5 서브레이어2",
+				"value": "emap5_sub2",
+				"parent": "emap5",
+				"type": "emap",
+				"property": {}
+			},
+			{
+				"name": "E-MAP_5 서브레이어3",
+				"value": "emap5_sub3",
+				"parent": "emap5",
+				"type": "emap",
+				"property": {}
+			}
+		]
+	}
+]

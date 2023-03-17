@@ -1,0 +1,38 @@
+//
+// Content
+//
+
+
+
+@include kt-desktop {
+	// Content
+	.kt-content {
+		// Content fit
+		&.kt-content--fit-top {
+			padding-top: 0;
+		}
+
+		&.kt-content--fit-bottom {
+			padding-bottom: 0;
+		}
+
+		// Footer fixed
+		.kt-footer--fixed & {
+			padding-bottom: kt-get($kt-footer-config, self, fixed, height);
+		}
+	}
+}
+
+@include kt-tablet-and-mobile {
+	// Content
+	.kt-content {
+		// Content fit
+		&.kt-content--fit-top {
+			padding-top: 0;
+		}
+
+		&.kt-content--fit-bottom {
+			padding-bottom: 0;
+		}
+	}
+}

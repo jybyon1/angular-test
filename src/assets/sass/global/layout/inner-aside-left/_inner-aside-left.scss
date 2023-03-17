@@ -1,0 +1,47 @@
+//
+// Left Inner Aside Dark Skin
+//
+
+
+
+// Base
+.kt-inner-aside-left {
+	background-color: kt-get($kt-inner-aside-left-config, self, bg-color);
+	box-shadow: kt-get($kt-inner-aside-left-config, self, shadow);
+	padding: kt-get($kt-inner-aside-left-config, self, padding);
+
+	// Content
+	.kt-inner-aside-left__content {
+		height: 100%;
+
+		.ps {
+			> .ps__rail-y {
+				right: 0px !important;
+			}
+		}
+	}
+
+	.kt-inner-aside-left__content-padding-x  {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+// Build offcanvas mode
+@include kt-offcanvas-build2(kt-inner-aside-left, default, kt-get($kt-inner-aside-left-config, self, offcanvas) );
+
+// Mobile view
+@include kt-tablet-and-mobile {
+	// Base
+	.kt-inner-aside-left {
+
+		// Content
+		.kt-inner-aside-left__content {
+			height: 100%;
+
+			.tab-pane {
+				padding-right: 0.5rem;
+			}
+		}
+	}
+}

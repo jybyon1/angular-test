@@ -1,0 +1,77 @@
+{
+	"attribute" : [
+		{
+			"name": "area",
+			"comment": "지역코드",
+			"nillable": true,
+			"binding": "varchar(20)"
+		},
+		{
+			"name": "name",
+			"comment": "자산이름",
+			"nillable": true,
+			"binding": "varchar(100)"
+		},
+		{
+			"name": "asset_type",
+			"comment": "자산종류",
+			"nillable": true,
+			"binding": "varchar(100)"
+		},
+		{
+			"name": "geom",
+			"comment": "자산위치",
+			"nillable": true,
+			"binding": "geometry"
+		},
+		{
+			"name": "install_date",
+			"comment": "설치일자",
+			"nillable": true,
+			"binding": "varchar(50)"
+		},
+		{
+			"name": "asset_id",
+			"comment": "식별번호",
+			"nillable": true,
+			"binding": "varchar(100)"
+		},
+		{
+			"name": "address",
+			"comment": "주소",
+			"nillable": true,
+			"binding": "varchar(250)"
+		},
+		{
+			"name": "model",
+			"comment": "모델명",
+			"nillable": true,
+			"binding": "varchar(100)"
+		},
+		{
+			"name": "state",
+			"comment": "작동상태",
+			"nillable": true,
+			"binding": "state"
+		},
+		{
+			"name": "sublayer_id",
+			"comment": "서브레이어",
+			"nillable": true,
+			"binding": "varchar(64)"
+		}
+	],
+	"defaultStyle": {
+		"line": {
+			"dashes": "solid",
+			"stroke": "#eee",
+			"stroke-width": 1
+		},
+		"polygon": {
+			"dashes": "solid",
+			"fill": "#eee",
+			"stroke": "#eee",
+			"stroke-width": 1
+		}
+	}
+}

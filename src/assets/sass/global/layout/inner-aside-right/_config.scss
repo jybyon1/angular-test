@@ -1,0 +1,84 @@
+//
+// Right Inner Aside
+//
+
+@import "../../../config";
+
+$inner-aside-right-default-width: 435px;
+
+$inner-aside-right-width: (
+	mypage: 435px,
+	inbox: 435px,
+	event-notification: 435px,
+	selected-asset: ($kt-content-width2 + 3px) * 2,
+	emap-selected-asset: ($kt-content-width2 + 3px) * 2,
+	network-monitoring: ($kt-content-width + 3px) * 3,
+	ordering: 435px,
+	icon-box: 435px,
+	color-picker: 435px,
+	req-applied-edit: 435px,
+	electronic-message-group-edit: 435px,
+	message-edit: 435px,
+	history-detail: 435px,
+	map: 600px,
+	group-history: 435px,
+	group-edit-side: 435px,
+	template-add-side: 435px,
+	group-edit: 435px,
+	user-edit: 435px,
+	user-new: 435px,
+	choice-asset: 435px,
+	asset-info-list: 400px,
+	complain-list: ($kt-content-width2 + 3px) * 2,
+	selected-smart-cctv: ($kt-content-width2 + 3px) * 2,
+	smart-search-result: 600px,
+	statistics-charts: 435px,
+	emap-asset-management: 435px,
+	event-detail: 435px
+);
+
+$kt-inner-aside-right-config: (
+	self: (
+		padding: 0,
+		bg-color: #fff,
+		shadow: 0px 0px 28px 0px rgba(82,63,105,0.13),
+
+		offcanvas: (
+			layout: (
+				self: (
+					zindex: 94,
+					direction: right,
+					transition:	all .3s ease,
+					width: $inner-aside-right-default-width
+				),
+
+				close: (
+					size: 25px,
+					font-size: 1.4rem
+				)
+			),
+
+			skin: (
+				self: (
+					bg-color: #ffffff,
+					shadow: 0px 1px 9px -3px rgba(0,0,0,0.75)
+				),
+
+				overlay: (
+					bg-color: rgba(#000000, 0.1),
+				),
+
+				close: (
+					icon-color: (
+						default: #968ad4,
+						hover: #ffffff
+					),
+					bg-color: (
+						default: darken(#f8f8fb, 5%),
+						hover: kt-brand-color()
+					)
+				)
+			)
+		)
+	)
+);
